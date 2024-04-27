@@ -84,6 +84,7 @@ function Dashboard() {
         return dataArr?.find((name) => name.name === str)?.qty || '';
     }
 
+
     // data normalization and rename function
     function dataNormalize(result) {
         const finalTsrFormData = result.map((doc, i) => ({
@@ -235,14 +236,19 @@ function Dashboard() {
         },
         {
     title: 'Audio',
-    dataIndex: 'trackUrl',
-    render: (trackUrl) => {
-        return trackUrl ? (
-      <audio controls>
-        <source src={trackUrl} />
-        Your browser does not support the audio element.
-      </audio>
-    ) : null;
+    dataIndex: 'Audio_Url',
+    render: (url) => {
+        
+        return (
+    <div>
+        {
+            url ? <audio controls>
+  <source src={url} type="audio/mp4"/>
+  Your browser does not support the audio element.
+</audio> : null
+        }
+    </div>
+    ) ;
     },
   },
    {
@@ -270,7 +276,6 @@ function Dashboard() {
    
     ];
 
-    console.log("data", data)
 
     return (
         <>
@@ -639,8 +644,6 @@ function Dashboard() {
                                     },
     }}
                             />
-
-
 
                 <section className="footer">
                     <footer>
