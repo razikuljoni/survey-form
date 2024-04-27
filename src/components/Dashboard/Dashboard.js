@@ -222,7 +222,30 @@ function Dashboard() {
     };
 
      const columns = [
+       
         {
+            title: "Timestamp",
+            dataIndex: "Timestamp",
+            render: (Timestamp) => ( <span className="extended__row__label">{Timestamp}</span>),
+        },
+        {
+            title: "Contact Number",
+            dataIndex: "Consumer_Contact_Number",
+            render: (num) => ( <span className="extended__row__label">{num}</span>),
+        },
+        {
+    title: 'Audio',
+    dataIndex: 'trackUrl',
+    render: (trackUrl) => {
+        return trackUrl ? (
+      <audio controls>
+        <source src={trackUrl} />
+        Your browser does not support the audio element.
+      </audio>
+    ) : null;
+    },
+  },
+   {
             title: "Signature",
             dataIndex: "Signature_Url",
             render: (signature) => 
@@ -244,29 +267,6 @@ function Dashboard() {
                                                                 }
                                                             />,
         },
-        {
-            title: "Timestamp",
-            dataIndex: "Timestamp",
-            render: (Timestamp) => ( <span className="extended__row__label">{Timestamp}</span>),
-        },
-        {
-            title: "Contact Number",
-            dataIndex: "Consumer_Contact_Number",
-            render: (num) => ( <span className="extended__row__label">{num}</span>),
-        },
-      
-        {
-    title: 'Audio',
-    dataIndex: 'trackUrl',
-    render: (trackUrl) => {
-        return trackUrl ? (
-      <audio controls>
-        <source src={trackUrl} />
-        Your browser does not support the audio element.
-      </audio>
-    ) : null;
-    },
-  },
    
     ];
 
