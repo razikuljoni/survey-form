@@ -629,8 +629,7 @@ function Dashboard() {
 
                 <Table
                 style={{
-                    marginTop: '20px',
-                    marginBottom: '20px',
+                    marginBottom: '30px',
                 }}
                  columns={columns}
                                 dataSource={data}
@@ -666,21 +665,31 @@ function Dashboard() {
                             />
 
 
-      <Modal title="Terms and Conditions & Signature" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{
+      <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{
         width: '80% !important',
       }}>
+          <p style={{
+                fontSize: "30px",
+                color: "black"
+            }}>Terms and Conditions: </p>
         <ul style={{listStyle: 'none'}}>
             {
                 termsAndConditionsData?.map((condition, index) => {
                     return (
                         <li key={index}>
-                            <p>{condition}</p>
+                            <p style={{
+                                marginBottom: '10px',
+                            }}>{condition}</p>
                         </li>
                     )
                 })
             }
+            <p style={{
+                fontSize: "30px",
+                color: "black"
+            }}>Consumer Signature: </p>
                             <img style={{
-                                width: '100%',
+                                width: '200px',
                                 height: 'auto',
                                 marginTop: '20px',
                             }} src={signature} alt="signature" />
