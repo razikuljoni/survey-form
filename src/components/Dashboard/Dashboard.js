@@ -272,7 +272,7 @@ function Dashboard() {
 //     },
 //   },
    {
-            title: "Signature",
+            title: "Details",
             dataIndex: "Signature_Url",
             render: (sig) => 
               <a href="#"               onClick={() => showModal(sig)}
@@ -628,6 +628,7 @@ function Dashboard() {
                 </section> */}
 
                 <Table
+                loading={loading}
                 style={{
                     marginBottom: '30px',
                 }}
