@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable arrow-body-style */
 /* eslint-disable jsx-a11y/media-has-caption */
 /* eslint-disable react/no-array-index-key */
@@ -9,7 +10,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable prettier/prettier */
 
-import { Image, Table } from "antd";
+import { Modal, Table } from "antd";
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
 import { Container, Spinner } from 'react-bootstrap';
@@ -22,6 +23,7 @@ import InputIcon from 'react-multi-date-picker/components/input_icon';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import logo from '../../assets/logo.svg';
+import termsAndConditionsData from "../../termsAndConditionsData";
 import './dashboard.css';
 
 const notify = (status, message) => {
@@ -53,6 +55,24 @@ function Dashboard() {
     const [formValue, setFormValue] = useState(localStorage.getItem('formValue') || 'tsrforms');
 
      const [expandedRow, setExpandedRow] = useState(null);
+
+    //  Modal Options 
+      const [isModalOpen, setIsModalOpen] = useState(false);
+
+      const [signature, setSignature] = useState(null);
+  const showModal = (sig) => {
+    console.log(sig);
+    setSignature(sig);
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+    setSignature(null);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+    setSignature(null);
+  };
 
     // get survey value
     function getValue(e) {
@@ -234,44 +254,44 @@ function Dashboard() {
             dataIndex: "Consumer_Contact_Number",
             render: (num) => ( <span className="extended__row__label">{num}</span>),
         },
-        {
-    title: 'Audio',
-    dataIndex: 'Audio_Url',
-    render: (url) => {
+//         {
+//     title: 'Audio',
+//     dataIndex: 'Audio_Url',
+//     render: (url) => {
         
-        return (
-    <div>
-        {
-            url ? <audio controls>
-  <source src={url} type="audio/mp4"/>
-  Your browser does not support the audio element.
-</audio> : null
-        }
-    </div>
-    ) ;
-    },
-  },
+//         return (
+//     <div>
+//         {
+//             url ? <audio controls>
+//   <source src={url} type="audio/mp4"/>
+//   Your browser does not support the audio element.
+// </audio> : null
+//         }
+//     </div>
+//     ) ;
+//     },
+//   },
    {
             title: "Signature",
             dataIndex: "Signature_Url",
-            render: (signature) => 
-              <Image
+            render: (sig) => 
+              <a href="#"               onClick={() => showModal(sig)}
+>
+    <img
                                                                 width={50}
                                                                 height={50}
                                                                style={{
                                                                 border: "1px solid grey",
                                                                 borderRadius: "10px"
                                                                }}
-                                                                preview={{
-                                                                    src:
-                                                                        signature ||
-                                                                        "",
-                                                                }}
+                                                              
                                                                 src={
-                                                                    signature ||
+                                                                    sig ||
                                                                     ""
                                                                 }
-                                                            />,
+                                                                alt="signature"
+                                                            />
+</a>,
         },
    
     ];
@@ -644,6 +664,29 @@ function Dashboard() {
                                     },
     }}
                             />
+
+
+      <Modal title="Terms and Conditions & Signature" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{
+        width: '80% !important',
+      }}>
+        <ul style={{listStyle: 'none'}}>
+            {
+                termsAndConditionsData?.map((condition, index) => {
+                    return (
+                        <li key={index}>
+                            <p>{condition}</p>
+                        </li>
+                    )
+                })
+            }
+                            <img style={{
+                                width: '100%',
+                                height: 'auto',
+                                marginTop: '20px',
+                            }} src={signature} alt="signature" />
+
+        </ul>
+      </Modal>
 
                 <section className="footer">
                     <footer>
