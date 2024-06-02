@@ -1,129 +1,130 @@
 .form-drop-down,
 .date-cal {
-  background: #f3f3f3;
-  padding: 0.75rem 1rem;
-  border-radius: 10px;
-  border: none;
-  font-family: sans-serif;
+    background: #f3f3f3;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: none;
+    font-family: sans-serif;
 }
 .rmdp-input {
-  border-radius: 10px !important;
-  height: 45px !important;
-  margin: 1px 0 1px 10px !important;
-  padding: 2px 5px !important;
-  background: #f3f3f3 !important;
-  border: none !important;
+    border-radius: 10px !important;
+    height: 45px !important;
+    margin: 1px 0 1px 10px !important;
+    padding: 2px 5px !important;
+    background: #f3f3f3 !important;
+    border: none !important;
 }
 .logo {
-  width: 120px;
-  margin-right: 20px;
-  border: 2px solid #ffffff;
-  border-radius: 10px;
+    width: 120px;
+    margin-right: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
 }
 .dashboard-header {
-  background-color: rgb(253, 227, 176);
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background-color: rgb(253, 227, 176);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .title-container {
-  background-image: url(../../assets/banner.svg);
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 20px 0;
+    background-image: url(../../assets/banner.svg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 0;
 }
 .title {
-  font-family: "Hind Siliguri";
-  font-style: normal;
-  font-size: 2.375rem;
-  font-weight: 600;
-  line-height: 1.25;
-  color: #df6812;
+    font-family: "Hind Siliguri";
+    font-style: normal;
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #df6812;
 }
+
 .title2 {
-  font-family: "Hind Siliguri";
-  font-style: normal;
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 25px;
-  color: #df6812;
+    font-family: "Hind Siliguri";
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #df6812;
 }
 .survey-cart-container {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 .cart {
-  padding: 1.75rem 1.875rem 1.875rem;
-  border-radius: 0.9375rem;
+    padding: 1.75rem 1.875rem 1.875rem;
+    border-radius: 0.9375rem;
 }
 .cart-top-area {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 }
 .cart-top-area > a {
-  background-color: transparent;
-  border: none;
+    background-color: transparent;
+    border: none;
 }
 .cart-top-area > a > img {
-  width: 30px;
-  cursor: pointer;
+    width: 30px;
+    cursor: pointer;
 }
 .cart-top-area > a:hover {
-  background-color: transparent;
+    background-color: transparent;
 }
 .cart-1 {
-  background: linear-gradient(104.8deg, #fff1e3 0%, #fcc797 92.84%);
-  color: #ff8f28;
+    background: linear-gradient(104.8deg, #fff1e3 0%, #fcc797 92.84%);
+    color: #ff8f28;
 }
 .cart-2 {
-  background: linear-gradient(
-    113.62deg,
-    #ffecec 0%,
-    #f7c6c6 99.88%,
-    #e78b8b 99.88%
-  );
-  color: #dc5e5e;
+    background: linear-gradient(
+        113.62deg,
+        #ffecec 0%,
+        #f7c6c6 99.88%,
+        #e78b8b 99.88%
+    );
+    color: #dc5e5e;
 }
 .cart-3 {
-  background: linear-gradient(104.8deg, #dff0f5 0%, #a2d4e1 92.84%);
-  color: #38a6c1;
+    background: linear-gradient(104.8deg, #dff0f5 0%, #a2d4e1 92.84%);
+    color: #38a6c1;
 }
 .cart-4 {
-  background: linear-gradient(113.62deg, #f6ffdd 0%, #c5dfa5 99.88%);
-  color: #8db15c;
+    background: linear-gradient(113.62deg, #f6ffdd 0%, #c5dfa5 99.88%);
+    color: #8db15c;
 }
 .cart-5 {
-  background: linear-gradient(113.62deg, #f5f4a6 0%, #d5ee7a 99.88%);
-  color: #a8b15c;
+    background: linear-gradient(113.62deg, #f5f4a6 0%, #d5ee7a 99.88%);
+    color: #a8b15c;
 }
 .cart-6 {
-  background: linear-gradient(113.62deg, #cdb4fc 0%, #8486f3 99.88%);
-  color: #6255d4;
+    background: linear-gradient(113.62deg, #cdb4fc 0%, #8486f3 99.88%);
+    color: #6255d4;
 }
 .cart-top-area > h4 {
-  font-family: "Hind Siliguri";
-  font-style: normal;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.4;
-  color: #414141;
-  margin: 0;
+    font-family: "Hind Siliguri";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #414141;
+    margin: 0;
 }
 .cart > p {
-  font-family: "Ruposhi Bangla Unicode";
-  font-style: normal;
-  font-size: 2.8125rem;
-  font-weight: 700;
-  line-height: 1.4;
+    font-family: "Ruposhi Bangla Unicode";
+    font-style: normal;
+    font-size: 2.8125rem;
+    font-weight: 700;
+    line-height: 1.4;
 }
 .copyright {
-  font-family: sans-serif;
-  font-size: 14px;
-  text-align: center;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: center;
 }
 .copyright > a {
-  text-decoration: none;
+    text-decoration: none;
 }

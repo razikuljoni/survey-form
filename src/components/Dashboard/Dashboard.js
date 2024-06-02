@@ -354,12 +354,15 @@ function Dashboard() {
                                     render={<InputIcon />}
                                     onClose={() => calendarCloseFunc()}
                                 />
-                                <h2 className="title" style={{margin: '0 0 0 30px'}}>
-                                {loading ? 'Loading....' : 'Consent From Demo'}
-                                </h2>
+                            
                             </div>
                         )}
                     </div>
+                    <div className="main-container">
+                             <h2 className="title">
+                                    {loading ? 'Loading....' : 'Consent From Demo'}
+                                </h2>
+                             </div>
                     {loading ? (
                         <Spinner animation="border" variant="primary" />
                     ) : (
