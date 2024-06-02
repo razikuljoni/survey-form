@@ -75,11 +75,11 @@ function Dashboard() {
   };
 
     // get survey value
-    function getValue(e) {
-        localStorage.setItem('formValue', e);
-        setFormValue(e);
-        notify(success, 'Survey Moved.');
-    }
+    // function getValue(e) {
+    //     localStorage.setItem('formValue', e);
+    //     setFormValue(e);
+    //     notify(success, 'Survey Moved.');
+    // }
 
     // common data
     function commonData(dataArr, i) {
@@ -155,25 +155,25 @@ function Dashboard() {
     }
 
 
-    const count1 = data?.reduce((a,c) =>  a + (Number(c['Unique Capsule']) >= 1 ? 1 : 0)
-     , 0)
+    // const count1 = data?.reduce((a,c) =>  a + (Number(c['Unique Capsule']) >= 1 ? 1 : 0)
+    //  , 0)
 
-     const count2 = data?.reduce((a,c) =>  a + (Number(c['Refreshing Taste and Smell']) >= 1 ? 1 : 0)
-     , 0)
-     const count3 = data?.reduce((a,c) =>  a + (Number(c['Benson & Hadges Breeze']) >= 1 ? 1 : 0)
-     , 0)
+    //  const count2 = data?.reduce((a,c) =>  a + (Number(c['Refreshing Taste and Smell']) >= 1 ? 1 : 0)
+    //  , 0)
+    //  const count3 = data?.reduce((a,c) =>  a + (Number(c['Benson & Hadges Breeze']) >= 1 ? 1 : 0)
+    //  , 0)
 
-     const totalKeywordCountOutlet = data?.reduce((count, item) => {
-        const hasUniqueCapsule = item['Unique Capsule'] >= 1;
-        const hasRefreshingTasteAndSmell = item['Refreshing Taste and Smell'] >= 1;
-        const hasBensonAndHadgesBreeze = item['Benson & Hadges Breeze'] >= 1;
+    //  const totalKeywordCountOutlet = data?.reduce((count, item) => {
+    //     const hasUniqueCapsule = item['Unique Capsule'] >= 1;
+    //     const hasRefreshingTasteAndSmell = item['Refreshing Taste and Smell'] >= 1;
+    //     const hasBensonAndHadgesBreeze = item['Benson & Hadges Breeze'] >= 1;
       
-        if (hasUniqueCapsule || hasRefreshingTasteAndSmell || hasBensonAndHadgesBreeze) {
-          return count + 1;
-        } 
-          return count;
+    //     if (hasUniqueCapsule || hasRefreshingTasteAndSmell || hasBensonAndHadgesBreeze) {
+    //       return count + 1;
+    //     } 
+    //       return count;
         
-      }, 0);
+    //   }, 0);
 
     // date format
     // function formatDate(val) {
