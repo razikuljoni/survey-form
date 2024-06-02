@@ -52,7 +52,7 @@ function Dashboard() {
     const [value, setValue] = useState(new Date());
 
     // current survey state
-    const [formValue, setFormValue] = useState(localStorage.getItem('formValue') || 'tsrforms');
+    const [formValue] = useState(localStorage.getItem('formValue') || 'tsrforms');
 
      const [expandedRow, setExpandedRow] = useState(null);
 
