@@ -333,18 +333,18 @@ function Dashboard() {
                         ) : (
                             <div style={{display: 'flex', alignItems: 'center'}}>
                                 <img src={logo} alt="form logo" className="logo" />
-                                <select
+                               {/* <select
                                     name="form-data"
                                     className="form-drop-down"
                                     defaultValue={formValue}
                                     onChange={(e) => getValue(e.target.value)}
                                 >
                                     <option value="tsrforms">TSR Form</option>
-                                    {/* <option value="pricecompliancesurveys">
+                                     <option value="pricecompliancesurveys">
                                         Price Complaiance Survey
                                     </option>
-                                    <option value="mslivesurveys">MS Live Survey</option> */}
-                                </select>
+                                    <option value="mslivesurveys">MS Live Survey</option> 
+                                </select> */}
                                 <DatePicker
                                     disabled={loading}
                                     value={value}
@@ -355,7 +355,7 @@ function Dashboard() {
                                     onClose={() => calendarCloseFunc()}
                                 />
                                 <h2 className="title" style={{margin: '0 0 0 30px'}}>
-                                {loading ? 'Loading....' : 'Survey Dashboard'}
+                                {loading ? 'Loading....' : 'Consent From Demo'}
                                 </h2>
                             </div>
                         )}
@@ -382,12 +382,12 @@ function Dashboard() {
                             {!loading && <h2 className="title2">
                                 Total Submitted: <CountUp end={data?.length || 0} />
                             </h2>}
-                            {!loading && <h2 className="title2">
+                            {/* {!loading && <h2 className="title2">
                                 Keyword Detect Outlet: <CountUp end={totalKeywordCountOutlet || 0} />
-                            </h2>}
+                            </h2>} */}
                             </div>
 
-                            <div>
+                            {/* <div>
                                 {!loading && 
                                     <p style={{margin: 0}}>
                                         <span style={{fontWeight: 600}}>Unique Capsule: </span> ({count1}/{data?.length}) <span style={{fontWeight: 600}}>{Math.round((100 * count1) /( data?.length || 0))}%</span>
@@ -403,7 +403,7 @@ function Dashboard() {
                                         <span style={{fontWeight: 600}}>Benson & Hadges Breeze: </span>({count3}/{data?.length}) <span style={{fontWeight: 600}}>{Math.round((100 * count3) /( data?.length || 0))}%</span>
                                     </p>
                                 }
-                            </div>
+                            </div> */}
                         </div>
                     </Container>
                 </section>
